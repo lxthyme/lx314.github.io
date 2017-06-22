@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo-搭建 | LXThyme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="¶Hexo-搭建 ¶前置环境   安装 nodejs, ‘npm’   安装 hexo  1npm install hexo-cli -g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo-搭建">
+<meta property="og:url" content="http://yoursite.com/2017/06/06/2016-06-12-Hexo-搭建/index.html">
+<meta property="og:site_name" content="LXThyme">
+<meta property="og:description" content="¶Hexo-搭建 ¶前置环境   安装 nodejs, ‘npm’   安装 hexo  1npm install hexo-cli -g">
+<meta property="og:updated_time" content="2017-06-12T16:11:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo-搭建">
+<meta name="twitter:description" content="¶Hexo-搭建 ¶前置环境   安装 nodejs, ‘npm’   安装 hexo  1npm install hexo-cli -g">
+  
+    <link rel="alternate" href="/atom.xml" title="LXThyme" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">LXThyme</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">心有感激,姿态从容</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2016-06-12-Hexo-搭建" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/06/2016-06-12-Hexo-搭建/" class="article-date">
+  <time datetime="2017-06-05T23:14:27.000Z" itemprop="datePublished">2017-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo-搭建
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="hexo-搭建"><a class="header-anchor" href="#hexo-搭建">¶</a>Hexo-搭建</h2>
+<h4 id="前置环境"><a class="header-anchor" href="#前置环境">¶</a>前置环境</h4>
+<ol>
+<li>
+<p>安装 <code>nodejs</code>, ‘npm’</p>
+</li>
+<li>
+<p>安装 hexo</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li>
+<p>部署</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 初始化博客的目录</span></div><div class="line">hexo init</div></pre></td></tr></table></figure>
+<p><strong>目录结构</strong></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── .deploy</div><div class="line">├── public</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── <span class="built_in">source</span></div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">├── themes</div><div class="line">├── _config.yml</div><div class="line">└── package.json</div></pre></td></tr></table></figure>
+<ul>
+<li>.deploy：执行hexo deploy命令部署到GitHub上的内容目录</li>
+<li>public：执行hexo generate命令，输出的静态网页内容目录</li>
+<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
+<li>scripts：扩展脚本目录，这里可以自定义一些javascript脚本</li>
+<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这里，该目录下可新建页面目录。</li>
+<li>_drafts：草稿文章</li>
+<li>_posts：发布文章</li>
+<li>themes：主题文件目录</li>
+<li>_config.yml：全局配置文件，大多数的设置都在这里</li>
+<li>package.json：应用程序数据，指明hexo的版本等信息，类似于一般软件中的关于按钮</li>
+</ul>
+</li>
+</ol>
+<h4 id="hexo-命令"><a class="header-anchor" href="#hexo-命令">¶</a>Hexo 命令</h4>
+<p><strong>Hexo常用命令:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo new <span class="string">"postName"</span>       <span class="comment">#新建文章</span></div><div class="line">hexo new page <span class="string">"pageName"</span>  <span class="comment">#新建页面</span></div><div class="line">hexo generate             <span class="comment">#生成静态页面至public目录</span></div><div class="line">hexo server               <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div><div class="line">hexo deploy               <span class="comment">#将.deploy目录部署到GitHub</span></div></pre></td></tr></table></figure>
+<p><strong>简写</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo n == hexo new</div><div class="line">hexo g == hexo generate</div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure>
+<p><strong>常用发布命令</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 简写方式: hexo clean;hexo g;hexo s</span></div><div class="line">hexo clean;hexo generate -w;hexo server</div><div class="line"></div><div class="line"><span class="comment"># Hexo 能够监视文件变动并立即重新生成静态文件，在生成时会比对文件的 SHA1 checksum，只有变动的文件才会写入。</span></div><div class="line">hexo generate --watch</div><div class="line"></div><div class="line"><span class="comment"># 让 Hexo 在生成完毕后自动部署网站(两个命令的作用是相同的)</span></div><div class="line">hexo generate --deploy</div><div class="line">hexo deploy --generate</div><div class="line"></div><div class="line"><span class="comment"># 上面两个命令可以简写为</span></div><div class="line">hexo g -d</div><div class="line">hexo d -g</div><div class="line"></div><div class="line">hexo generate --deploy --watch</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-d, --deploy</td>
+<td>文件生成后立即部署网站</td>
+</tr>
+<tr>
+<td style="text-align:left">-w, --watch</td>
+<td>监视文件变动</td>
+</tr>
+</tbody>
+</table>
+<h4 id="hexo-博客管理"><a class="header-anchor" href="#hexo-博客管理">¶</a>Hexo 博客管理</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: Mac提高使用效率的一些方法   <span class="comment">#文章的标题，这个才是显示的文章标题，其实文件名不影响</span></div><div class="line">date: 2015-09-01 20:33:26      <span class="comment">#用命令会自动生成，也可以自己写，所以文章时间可以改</span></div><div class="line">categories: technology         <span class="comment">#文章的分类，这个可以自己定义</span></div><div class="line">tags: [Mac,效率,快捷方式]        <span class="comment">#tag，为文章添加标签，方便搜索</span></div><div class="line">---</div><div class="line"><span class="comment"># 如果在博客文章列表中，不想全文显示，可以增加 &lt;!--more--&gt;, 后面的内容就不会显示在列表。</span></div><div class="line">&lt;!--more--&gt;</div></pre></td></tr></table></figure>
+<h4 id="插件"><a class="header-anchor" href="#插件">¶</a>插件</h4>
+<ol>
+<li>
+<p><a href="https://www.npmjs.com/package/hexo-generator-feed" target="_blank" rel="external">RSS</a></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-feed --save</div></pre></td></tr></table></figure>
+<p><strong>注:</strong></p>
+<ul>
+<li>在博客目录 /public 下，会生成 atom.xml 文件</li>
+</ul>
+<p><strong>配置</strong></p>
+<p>然后在 Hexo 根目录下的 _config.yml 里配置一下</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">feed:</div><div class="line">    <span class="built_in">type</span>: atom</div><div class="line">    path: atom.xml</div><div class="line">    <span class="built_in">limit</span>: 20</div><div class="line"><span class="comment">#type 表示类型, 是 atom 还是 rss2.</span></div><div class="line"><span class="comment">#path 表示 Feed 路径</span></div><div class="line"><span class="comment">#limit 最多多少篇最近文章</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>
+<p>添加<a href="https://www.npmjs.com/package/hexo-generator-sitemap" target="_blank" rel="external">Sitemap</a></p>
+<blockquote>
+<p>Sitemap 的提交主要的目的，是要避免搜索引擎的爬虫没有完整的收录整个网页的内容，所以提交 Sitemap 是能够补足搜索引擎的不足，进而加速网页的收录速度，达到搜寻引擎友好的目的。</p>
+</blockquote>
+<p><strong>命令</strong></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-sitemap --save</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>**配置**
+
+在 Hexo 根目录下的 _config.yml 里配置一下
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sitemap:</div><div class="line">   path: sitemap.xml</div><div class="line">   <span class="comment">#path 表示 Sitemap 的路径. 默认为 sitemap.xml.</span></div></pre></td></tr></table></figure>
+
+    
+**Others**
+
+对于国内用户还需要安装插件 hexo-generator-baidu-sitemap, 顾名思义是为百度量身打造的. 安装
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-baidu-sitemap --save</div></pre></td></tr></table></figure>
+
+
+然后在 Hexo 根目录下的 _config.yml 里配置一下
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">baidusitemap:</div><div class="line">    path: baidusitemap.xml</div></pre></td></tr></table></figure>
+</code></pre>
+<h4 id="todo"><a class="header-anchor" href="#todo">¶</a>TODO</h4>
+<ul>
+<li>[ ] 评论</li>
+<li>[ ] 404页面</li>
+<li>[ ] 统计</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/06/2016-06-12-Hexo-搭建/" data-id="cj48a443400042h7bxj7olp5r" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/06/13/2016-06-12-CAAnimation/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CAAnimation
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/12/2016-06-12-Work/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Work</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/20/2016-06-20-jQuery五 CSS/">jQuery五 CSS</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/13/2016-06-12-多线程/">多线程</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/13/2016-06-12-Background Tasks/">Background Tasks</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/13/2016-06-12-性能优化/">性能优化</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 &lt;a href=&quot;http://weibo.com/lxthyme/home&quot;&gt;@LXThyme&lt;/a&gt;<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+        <script src="/js/jquery-2.2.4.min.js"></script>
+        
+            <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+                <script src="/fancybox/jquery.fancybox.pack.js"></script>
+                    
+
+                        <script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
